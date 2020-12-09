@@ -36,4 +36,32 @@ NLTK- Natural Language Toolkit which is a major forum for developing python prog
 4. Predict the response
 5. Creating GUI for chatbot.
 
-
+### 1. Import and load the data file:
+Firstly, we have to import the required libraries such as NLTK, pickle, numpy, tensorflow and keras. Then parse the json file into python by importing JSON library.
+![]()
+From the below screenshot, we can see how the ‘intents data.json’ file looks like. So we can see the intents, patterns and responses here in the data file.
+![]()
+### 2. Pre-processing the data:
+Since the data is a text one, so we need to pre-process the data before creating a model. This process we can do by tokenizing and lemmatizing the words in the data. Tokenizing is the method by which the entire document is divided into small sections, such as phrases. For that we use nltk.word_tokenize(). We create a nested for loop and build a list of classes for our tags.
+![]()
+After that the list of words will be taken and then will lemmatize. Lemmatize means to translate a word into a base meaning. For Example, Jumped- Jump. The goal of doing this is to narrow down anything into base level so that when we finally process these terms for machine learning, it will save us a lot of time and needless mistakes. This is somewhat similar to stemming, which is to reduce down to its base or root form an inflected term.
+![]()
+### 3. Creating the Deep Learning Model:
+First, We create training data by giving input and output. The patterns will be our input and the output shall be the class to which our input pattern refers. The machine doesn't understand text, however, so we're going to translate text into numbers.
+![]()
+With the help of training data we created a 3-layer neural network. For that keras sequential API is used. In reality, one of the simplest neural networks, a multi-layer perceptron, is the Sequential model in Keras. This network has 3 layers, with 128 neurons in the first, 64 neurons in the second, the number of intents within that last as the number of neurons. After training the model, the whole thing is changed to a numpy array and restored as ‘chatbot_model.h5’.
+### 4. Predict the Response:
+![]()
+We are going to load the trained model and then use a graphical user interface that predicts the bot's reaction. The model can only inform us the class to which it belongs, so we can execute those functions that will define the class and then extract a random response from the answer list.
+With the help of clean_up_sentence() function all the input sentences are cleaned up. Then bow() function is used to create a bag of words for forecasting the classes. Next, as you can see in the picture the error threshold is 0.25 which is to avoid too much overfitting.  The getResponse() function takes the output list and scans the json file and produces the maximum likelihood of most answers. 
+![]()
+Ultimately, chatbot_response() collects the message which is entered by the user and predicts the class using predict_class() function. Then the answer is given back to the user with the help of getResponse(). Now we can ask bot anything and it responds back.
+![]()
+### 5. Creating GUI Using Tkinter:
+With the help of  Tkinter library in python we can create GUI for chatbot. By using this we create buttons such as send button which is a basic functionality. And also we built scrollbar, chat window and textbox for creating messages by adjusting the components like coordinates and heights.
+![]()
+##  Result:
+![]()
+## Conclusion:
+At last a chabot is created using a deep learning model and NLP. The data can be modified according to business requirements. So as I already explained how chatbots are changing the communication world in IT industries. With the help of different data we can get accurate responses from chatbot.
+## Bibliography:
