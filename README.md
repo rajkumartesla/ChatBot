@@ -69,3 +69,12 @@ Running all the codes perfectly in the jupyter notebook by installing pip3 we ge
 ## Conclusion:
 At last a chabot is created using a deep learning model and NLP. The data can be modified according to business requirements. So as I already explained how chatbots are changing the communication world in IT industries. With the help of different data we can get accurate responses from chatbot.
 ## Bibliography:
+
+1. [Top-10-ai-chatbot](https://medium.com/@ODSC/top-10-ai-chatbot-research-papers-from-axxiv-org-in-2019-1982dddabdb4)
+
+2. [Designing dialogue systems: A mean, grumpy, sarcastic chatbot in the browser](https://arxiv.org/pdf/1909.09531.pdf)
+
+3. [Enriching Conversation Context in Retrieval-based Chatbots](https://arxiv.org/pdf/1911.02290.pdf)
+
+4. [A-transformer-chatbot-tutorial-with-tensorflow](https://medium.com/tensorflow/a-transformer-chatbot-tutorial-with-tensorflow-2-0-88bf59e66fe2)
+
