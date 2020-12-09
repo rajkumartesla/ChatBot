@@ -1,0 +1,83 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+         "responses": ["I can guide you through Data Science Masters Course overview ", "Offering support for Data Science course overview"],
+         "context": [""]
+        },
+        {"tag": "Data Science course ",
+         "patterns": ["How many credit hours do I need to complete?", "credit hours", "number of credit hours to be completed for masters degree", "Masters degree credit hours" ],
+         "responses": ["For Masters degree in Data Sceince at UNT total number of required credit hours are 36 "],
+         "context": [""]
+        },
+        {"tag": "Mandatory course ",
+         "patterns": ["In details about the courses required to complete ", "offered courses", "Degree Structure for masters in Data Sceince degree" ],
+         "responses": ["3 Required courses, 9 Guided electives, 15 General electives, 9 Internship/research project, 3 visit(https://informationscience.unt.edu/ms-data-science-degree-structure) for detailed information about the courses."],
+         "context": [""]
+        },
+        {"tag": "Academic Advising",
+         "patterns": ["Do I need to contact anyone before registering to courses? ", " Course Registration Process", "What is the Course Registration process for more info visit " ],
+          "responses": [ "All students should contact their advisor for assistance before registering for classes. sessions are available for both current and prospective students, however, sessions must be scheduled in advance.", " contact information Sceince Advising department, for more info visit ( https://informationscience.unt.edu/academic-advising)" ],
+         "context": [ "" ]
+        },
+        {"tag": "Dean Info",
+         "patterns": ["Who is the director for Information science Department?", "I would like to know about the dean of Information Sceince Department", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
+         "responses": ["Please provide Patient ID", "Patient ID?"],
+         "context": ["search_blood_pressure_by_patient_id"]
+        },
+        {"tag": "search_blood_pressure_by_patient_id",
+         "patterns": [],
+         "responses": ["Loading Blood pressure result for Patient"],
+         "context": [""]
+        },
+        {"tag": "pharmacy_search",
+         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
+         "responses": ["Please provide pharmacy name"],
+         "context": ["search_pharmacy_by_name"]
+        },
+        {"tag": "pharmacy_search",
+         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
+         "responses": ["Please provide pharmacy name"],
+         "context": ["search_pharmacy_by_name"]
+        },
+        {"tag": "search_pharmacy_by_name",
+         "patterns": [],
+         "responses": ["Loading pharmacy details"],
+         "context": [""]
+        },
+        {"tag": "hospital_search",
+         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
+         "responses": ["Please provide hospital name or location"],
+         "context": ["search_hospital_by_params"]
+        },
+        {"tag": "search_hospital_by_params",
+         "patterns": [],
+         "responses": ["Please provide hospital type"],
+         "context": ["search_hospital_by_type"]
+        },
+        {"tag": "search_hospital_by_type",
+         "patterns": [],
+         "responses": ["Loading hospital details"],
+         "context": [""]
+        }
+   ]
+}
